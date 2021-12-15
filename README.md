@@ -18,8 +18,6 @@ This project is to help me gain a better understanding of the Github workflow wh
 
 
 ## Technologies Used
-- CSS3
-- HTML5 
 - Javascript
 ## Project Status
 _in progress_ 
