@@ -1,31 +1,40 @@
 let wordBank = {
-  verb: ["kicked", "punched", "head butted", "stamped"],
-  noun: ["Hulk Hulgan", "a badger", "a t-rex", "Santa"],
-  place: [
+  wordOne: [
+    "kicked",
+    "punched",
+    "head butted",
+    "stamped",
+    "pushed",
+    "kidney punched",
+    "upper cut",
+  ],
+  Word2: [
+    "Hulk Hulgan",
+    "a badger",
+    "a t-rex",
+    "Santa",
+    "his grandma",
+    "Mr.T",
+    "Donald Trump",
+    "Dave",
+  ],
+  word3: [
     "in the face.",
     "into a volcano.",
     "into the sun.",
     "in the nuts",
     "into submission.",
+    "until it self combusted",
   ],
 };
 //Generates a random number.
 let randomNum = (num) => Math.floor(Math.random() * num);
 
-//Generates random words and returns an array.
-let wordMachine = () => {
-  let wordHolder = [];
-  for (let word in wordBank) {
-    wordHolder.push(wordBank[word][randomNum(wordBank[word].length)]);
-  }
-  return wordHolder;
-};
-
-let sentenceMachine = (arr) => {
+//Returns an array of words as a sentence from the wordBank Obj.
+let sentenceMachine = () => {
   let sentence = ["Chuck Norris"];
-  arr.forEach((element) => {
-    sentence.push(element);
-    //console.log(sentence);
-  });
+  for (let word in wordBank) {
+    sentence.push(wordBank[word][randomNum(wordBank[word].length)]);
+  }
   return sentence.join(" ");
 };
