@@ -19,3 +19,13 @@ let wordMachine = () => {
   }
   return wordHolder;
 };
+
+let sentenceMachine = (arr) => {
+  let wordOne = arr[0];
+  let wordTwo = arr[1];
+  let wordThree = arr[2];
+  return `Chuck Norris ${wordOne} ${wordTwo} ${wordThree}.`;
+};
+
+let words = wordMachine();
+console.log(sentenceMachine(words));
