@@ -12,6 +12,7 @@ let wordBank = {
 //Generates a random number.
 let randomNum = (num) => Math.floor(Math.random() * num);
 
+//Generates random words and returns an array.
 let wordMachine = () => {
   let wordHolder = [];
   for (let word in wordBank) {
@@ -21,11 +22,10 @@ let wordMachine = () => {
 };
 
 let sentenceMachine = (arr) => {
-  let wordOne = arr[0];
-  let wordTwo = arr[1];
-  let wordThree = arr[2];
-  return `Chuck Norris ${wordOne} ${wordTwo} ${wordThree}.`;
+  let sentence = ["Chuck Norris"];
+  arr.forEach((element) => {
+    sentence.push(element);
+    //console.log(sentence);
+  });
+  return sentence.join(" ");
 };
-
-let words = wordMachine();
-console.log(sentenceMachine(words));
